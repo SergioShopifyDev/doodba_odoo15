@@ -35,6 +35,7 @@ services:
       LIST_DB: "true"
       DEBUGPY_ENABLE: "${DOODBA_DEBUGPY_ENABLE:-0}"
       PGDATABASE: &dbname devel
+      DB_NAME: *dbname
       PYTHONDONTWRITEBYTECODE: 1
       PYTHONOPTIMIZE: ""
       PYTHONPATH: /opt/odoo/custom/src/odoo
@@ -61,7 +62,11 @@ services:
       - --limit-time-real-cron=9999999
       - --limit-time-real=9999999
       - --workers=0
+      - --max-cron-threads=0
       - --dev=reload,qweb,werkzeug,xml
+    networks:
+      default:
+      public:
 
   db:
     extends:
