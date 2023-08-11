@@ -2,3 +2,5 @@ odoo:
   - "*"
 localizacion:
   - "*"
+web:
+  - "web_responsive"
