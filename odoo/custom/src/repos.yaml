@@ -16,7 +16,16 @@
   defaults:
     depth: $DEPTH_DEFAULT
   remotes:
-    origin: https://github.com/Odoo-EC/l10n-ecuador.git
+    origin: https://github.com/OCA/l10n-spain.git
   target: origin $ODOO_VERSION
   merges:
     - origin $ODOO_VERSION-dev
+./web:
+  defaults:
+    depth: $DEPTH_DEFAULT
+  remotes:
+    origin: https://github.com/OCA/web.git
+  target: origin $ODOO_VERSION
+  merges:
+    - origin $ODOO_VERSION-dev
+
