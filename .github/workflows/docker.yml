@@ -19,7 +19,7 @@ jobs:
           #username: ${{ secrets.REGISTER_USERNAME }}
           #password: ${{ secrets.REGISTER_TOKEN }}
           username: "sergioshopifydev"
-          password: "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"
+          password: "Arn0537"
       - name: Create Credentials
         id: create_credentials
         run: |
