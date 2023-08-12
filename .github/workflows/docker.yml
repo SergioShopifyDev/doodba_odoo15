@@ -31,7 +31,7 @@ jobs:
           docker-compose --file prod.yaml --project-name odoo up -d --build --remove-orphans
           docker-compose --file prod.yaml --project-name odoo down
           docker image list
-          docker tag odoo_odoo:latest ghcr.io/odoo-ec/doodba_odoo15_ec:${{ github.ref_name }}-${{ github.sha }}
-          docker tag odoo_odoo:latest ghcr.io/odoo-ec/doodba_odoo15_ec:${{ github.ref_name }}-latest
-          docker push ghcr.io/odoo-ec/doodba_odoo15_ec:${{ github.ref_name }}-${{ github.sha }}
-          docker push ghcr.io/odoo-ec/doodba_odoo15_ec:${{ github.ref_name }}-latest
+          docker tag odoo_odoo:latest ghcr.io/sergioshopifydev/doodba_odoo15:${{ github.ref_name }}-${{ github.sha }}
+          docker tag odoo_odoo:latest ghcr.io/sergioshopifydev/doodba_odoo15:${{ github.ref_name }}-latest
+          docker push ghcr.io/sergioshopifydev/doodba_odoo15:${{ github.ref_name }}-${{ github.sha }}
+          docker push ghcr.io/sergioshopifydev/doodba_odoo15:${{ github.ref_name }}-latest
